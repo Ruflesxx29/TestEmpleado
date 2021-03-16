@@ -38,6 +38,11 @@ public class EmpleadosBrutoTest {
         obj.add(new Object[] {1500,1230});
         obj.add(new Object[] {1499.99,1259.9916});
         obj.add(new Object[] {1250,1050});
+        obj.add(new Object[] {1000,840});
+        obj.add(new Object[] {999.99,999.99});
+        obj.add(new Object[] {500,500});
+        obj.add(new Object[] {0,0});
+        obj.add(new Object[] {-1, 0});
         return obj;
     }
     
@@ -47,6 +52,7 @@ public class EmpleadosBrutoTest {
         try {
             ArrayList<Object[]> obj = new ArrayList();
             obj=testEmpParametrizadas ();
+            
             double result = Empleados.calculaSalarioNeto(salario);
             assertEquals(this.exp, result, 0.01);
             // TODO review the generated test code and remove the default call to fail.
